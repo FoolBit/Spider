@@ -4,4 +4,4 @@ test3
 new branch
 in master
 test comflict
-test
+testing
