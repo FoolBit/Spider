@@ -5,3 +5,4 @@ new branch
 in master
 test comflict
 test
+test stash
