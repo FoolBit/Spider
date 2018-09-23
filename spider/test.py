@@ -1,0 +1,12 @@
+import requests
+
+'''headers = {
+        'cookies':'right_button_guide=true; read_point_show=1; u17-advert-client-cookie=e024d6796250c551cedfe20209ac798a; chapter_ad_ids=450%7C451%7C449; comic_chapter_read_image_id=2895542; comic_chapter_read_top=40292; index_mobile_do_ad=1; UM_distinctid=16499505e990-0b8f81b876c4eb-47e1039-144000-16499505e9b904; bdshare_firstime=1531580553377; U17SID=pbz4nfx98q32xl6b1lp75uz6t0ic4hic; register_guide_one=1; register_guide_two=1; register_guide_three=1; register_guide_four=1; register_guide_five=1; JSESSIONID=aaarPNt6Pm9cZ6OfqfMsw; pay_from=5553%7C788091; xxsetting=%7B%22tucao%22%3A%221%22%2C%22comicPanelXY%22%3A%221%2C35%2C200%22%2C%22comicScrFloat%22%3A%22c%22%2C%22save_login%22%3A1%7D; xxauthkey=RrMKaLg4%7C0%3A0%3A0%3A%3A1%7C%E6%A2%A6%E5%BE%80%E7%B9%81%E6%98%9F%7CEED29A40B3CB337808BC3634CB2B0628.qq%7C1531795335%7C27916916%7C41e47fe9ba6ae0948a3663391047ee10%7Cdefault.gif; xxuser_id=27916916; xxkid=1; xxnotify_count=0%3A0%3A0%3A0%3A0%3A0%3A0%3A0%3A0%3A0%3A0%3A0; _cnzz_CV30031742=%E7%94%A8%E6%88%B7%E7%B1%BB%E5%9E%8B%7C%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%7C1531834574614; CNZZDATA30031742=cnzz_eid%3D158741987-1531579071-null%26ntime%3D1531834573; xxreadmode='
+        }'''
+headers = {
+        'cookies':'comic_read_is_play_vip=true; index_mobile_do_ad=1; UM_distinctid=16499505e990-0b8f81b876c4eb-47e1039-144000-16499505e9b904; bdshare_firstime=1531580553377; U17SID=pbz4nfx98q32xl6b1lp75uz6t0ic4hic; register_guide_one=1; register_guide_two=1; register_guide_three=1; register_guide_four=1; register_guide_five=1; JSESSIONID=aaarPNt6Pm9cZ6OfqfMsw; pay_from=5553%7C788091; xxsetting=%7B%22tucao%22%3A%221%22%2C%22comicPanelXY%22%3A%221%2C35%2C200%22%2C%22comicScrFloat%22%3A%22c%22%2C%22save_login%22%3A1%7D; xxauthkey=RrMKaLg4%7C0%3A0%3A0%3A%3A1%7C%E6%A2%A6%E5%BE%80%E7%B9%81%E6%98%9F%7CEED29A40B3CB337808BC3634CB2B0628.qq%7C1531795335%7C27916916%7C41e47fe9ba6ae0948a3663391047ee10%7Cdefault.gif; xxuser_id=27916916; xxkid=1; xxreadmode=; _cnzz_CV30031742=%E7%94%A8%E6%88%B7%E7%B1%BB%E5%9E%8B%7C%E6%99%AE%E9%80%9A%E7%94%A8%E6%88%B7%7C1531834582966; CNZZDATA30031742=cnzz_eid%3D158741987-1531579071-null%26ntime%3D1531834581; xxnotify_count=0%3A0%3A0%3A0%3A0%3A0%3A0%3A0%3A0%3A0%3A0%3A0'
+        }
+url = 'http://www.u17.com/chapter_vip/399277.shtml'
+html = requests.get(url,headers=headers).text
+with open('test.html','w',encoding = 'utf-8') as f:
+    f.write(html)
